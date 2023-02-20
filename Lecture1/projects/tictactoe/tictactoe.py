@@ -199,10 +199,13 @@ def minimax(board):
             - It will try to reach -1, because its previously defined that O win is -1.
             - The values will range from -1 to 1.
             - With this AI, the value will never be 1, because the AI will always try to win.
+        If the AI play as X, and it is the first move, it will return the center of the board, because it is the best move, arguably.
     """
     if terminal(board) == True:
         return None
     if player(board) == X:
+        if board == initial_state():
+            return (1, 1)
         value = -math.inf
         optimal_action = None
         for action in actions(board):
