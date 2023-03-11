@@ -1,5 +1,5 @@
 ---
-# Table of Contents
+Table of Contents
 - [Terminology (1/2)](#through-out-this-course-we-will-be-using-the-following-terminology)
 - [Definition of a search problem](#a-search-problem-is-defined-by-the-following)
 - [Terminology (2/2)](#lets-add-some-more-terminology)
