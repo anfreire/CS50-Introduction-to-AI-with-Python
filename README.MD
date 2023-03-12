@@ -18,6 +18,26 @@
 - [Optimizations](#optimizations)
 - [Alpha-beta pruning](#alpha-beta-pruning)
 - [Depth-limited Minimax](#depth-limited-minimax)
+- [Knowledge-Based Agents](#knowledge-based-agents)
+- [Knowledge Representation](#knowledge-representation)
+    - [Not](#not)
+    - [And](#and)
+    - [Or](#or)
+    - [Implication](#implication)
+    - [Biconditional](#biconditional)
+- [Knowledge Model](#knowledge-model)
+- [Knowledge Base](#knowledge-base)
+- [Entailment](#entailment)
+- [Inference](#inference)
+- [Model Checking](#model-checking)
+- [Inference Rules](#inference-rules)
+- [Theorem Proving](#theorem-proving)
+- [Resolution](#resolution)
+- [Clause](#clause)
+- [Conjunctive Normal Form](#conjunctive-normal-form)
+- [Conversion to CNF](#conversion-to-cnf)
+- [Inference by Resolution](#inference-by-resolution)
+- [First-Order Logic](#first-order-logic)
 
 &nbsp;
 
@@ -371,6 +391,7 @@ Depth-limited Minimax is a limiter on the depth of the search tree. It is used t
 
 ---
 
+&nbsp;
 
 
 ## Knowledge-Based Agents 
@@ -389,10 +410,6 @@ Based on this information, we can conclude:
 
 - Harry did not visit Hagrid today.
 - It did not rain today.
- 
-&nbsp;
-
----
 
 &nbsp;
 
@@ -402,7 +419,13 @@ An assertion about the world in a knowledge representation language.
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
+
+&nbsp;
+
+## Knowledge Representation
 
 &nbsp;
 
@@ -421,6 +444,8 @@ To represent the information we have, there are several ways to do it. Today we 
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -434,6 +459,8 @@ To represent the information we have, there are several ways to do it. Today we 
 | F | T  |
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -450,6 +477,8 @@ To represent the information we have, there are several ways to do it. Today we 
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -465,6 +494,8 @@ To represent the information we have, there are several ways to do it. Today we 
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -479,6 +510,8 @@ To represent the information we have, there are several ways to do it. Today we 
 | F | F | T     |
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -498,12 +531,16 @@ To represent the information we have, there are several ways to do it. Today we 
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
 
 
-### Model
+## Knowledge Model
+
+&nbsp;
 
 A model assigns truth values to the propositional symbols in a knowledge base.
 
@@ -522,11 +559,15 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
 
-### Knowledge Base
+## Knowledge Base
+
+&nbsp;
 
 A knowledge base is a set of sentences in a knowledge representation language.
 
@@ -545,11 +586,15 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
 
-### Entailment
+## Entailment
+
+&nbsp;
 
 Every model in wich sentence a is true, sentence b is also true.
 
@@ -565,11 +610,15 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
 
-### Inference
+## Inference
+
+&nbsp;
 
 The process of deriving new sentences from old ones.
 
@@ -609,6 +658,8 @@ Example:
             - R is True
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -656,11 +707,13 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
 
-### Inference Rules
+## Inference Rules
 
 &nbsp;
 
@@ -791,6 +844,8 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -806,6 +861,8 @@ Example:
 - path cost function: number of steps in proof
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -852,6 +909,8 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -867,6 +926,8 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -881,6 +942,8 @@ Example:
         (P ∨ Q ∨ R) ∧ (¬P ∨ ¬Q ∨ ¬R)
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -925,6 +988,8 @@ Example:
 
 &nbsp;
 
+[Go to top](#table-of-contents)
+
 ---
 
 &nbsp;
@@ -955,6 +1020,8 @@ Example:
         Empty clause, so a contradiction was found, so KB |= a
 
 &nbsp;
+
+[Go to top](#table-of-contents)
 
 ---
 
@@ -991,17 +1058,3 @@ Example:
         - ∃x, P(x) is true if P(a) is true for some a.
             (At least one a exists that satisfies P(a))
     
-            Example:
-        
-                Information: 
-                    ∃x, (x is a wizard) ∧ (x is a student)
-    
-                We can conclude:
-                    Harry is a wizard, and Harry is a student.
-    
-        ∃x -> for some x
-    
-        P(x) -> predicate
-    
-        x -> variable
-
